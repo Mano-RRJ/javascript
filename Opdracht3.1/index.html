@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht3.1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        html {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            text-align: center;
+        }
+        img {
+            height: 300px;
+            width: 300px;
+            border: 0px;
+        }
+        #pics {
+            width: 900px;
+            height: 900px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Olieshuffle</h1>
+<div id="pics">
+    <img src="img/olie1.jpg">
+    <img src="img/olie2.jpg">
+    <img src="img/olie3.jpg">
+    <img src="img/olie4.jpg">
+    <img src="img/olie5.jpg">
+    <img src="img/olie6.jpg">
+    <img src="img/olie7.jpg">
+    <img src="img/olie8.jpg">
+    <img src="img/olie9.jpg">
+</div>
+<script id="mijnjavascript.js"></script>
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+
+    var randomNumbers = [];
+    while(randomNumbers.length < 9) {
+        random = Math.floor(Math.random() * 9) + 1;
+        if (randomNumbers.lastIndexOf(random) == -1) {
+            randomNumbers.push(random);
+        }
+    }
+    var random = 0;
+    for (var plaatje in plaatjes) {
+        plaatjes[plaatje].src = "img/olie" + randomNumbers[random] + ".jpg";
+        random++;
+    }
+</script>
+</body>
+</html>
