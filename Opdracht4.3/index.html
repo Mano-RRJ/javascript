@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht4.3</title>
+    <style>
+        #slideholder1 {
+            margin: auto;
+            height: 150px;
+            width: 300px;
+        }
+        #slideholder2 {
+            margin: auto;
+            height: 150px;
+            width: 300px;
+        }
+        #slideholder3 {
+            margin: auto;
+            height: 150px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="slideholder1">
+<script>
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder1 = document.getElementById("slideholder1");
+    slideholder1.style.backgroundImage = "url(img/eye1.png)";
+
+    slideholder1.addEventListener("click", function () {
+        slideholder1.style.backgroundImage = "url(img/eye" + geteye() + ".png)";
+    });
+
+    function geteye() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+
+    }
+</script>
+</div>
+
+<div id="slideholder2">
+<script>
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url(img/nose1.png)";
+
+    slideholder2.addEventListener("click", function () {
+        slideholder2.style.backgroundImage = "url(img/nose" + getnose() + ".png)";
+    });
+
+    function getnose() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+
+    }
+</script>
+</div>
+
+<div id="slideholder3">
+<script>
+    var plaatjes = [1, 2, 3];
+    var teller = 0;
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url(img/mouth1.png)";
+
+    slideholder3.addEventListener("click", function () {
+        slideholder3.style.backgroundImage = "url(img/mouth" + getmouth() + ".png)";
+    });
+
+    function getmouth() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+
+    }
+</script>
+</div>
+</body>
+</html>

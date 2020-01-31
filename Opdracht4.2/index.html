@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht4.2</title>
+    <style>
+        #slideholder {
+            height: 225px;
+            width: 225px;
+            border: solid 3px black;
+            transition: 500ms;
+        }
+    </style>
+</head>
+<body>
+<div id="slideholder"></div>
+<script>
+    var plaatjes = [1,2,3,4,5,6,7,8,9];
+    var teller = 0;
+    var slideholder = document.getElementById("slideholder");
+    slideholder.style.backgroundImage = "url(img/olie1.jpg)";
+
+    slideholder.addEventListener("click", function() {
+        slideholder.style.backgroundImage = "url(img/olie" + getaap() + ".jpg)";
+    });
+
+    function getaap() {
+        if (teller >= plaatjes.length) {
+            teller = 1;
+        } else {
+            teller++;
+        }
+        console.log(teller);
+        return teller;
+    }
+</script>
+
+</body>
+</html>

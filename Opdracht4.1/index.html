@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht4.1</title>
+</head>
+<body>
+<script >
+    var mijnauto = {
+        kleur: "Blauw",
+        merk: "Ford",
+        snelheid: 0,
+
+        gasgeven: function () {
+            this.snelheid += 5
+            console.log(this.snelheid);
+        },
+
+        toeteren: function () {
+            console.log("toet!");
+        }
+    }
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.gasgeven();
+    mijnauto.toeteren();
+</script>
+
+</body>
+</html>
